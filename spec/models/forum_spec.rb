@@ -1,5 +1,3 @@
-require 'spec_helper'
-
 describe Forum do
   fields = %i[name description]
   include_examples "has fields", fields
