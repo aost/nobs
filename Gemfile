@@ -12,6 +12,8 @@ gem 'coffee-rails', '~> 4.0.0'
 
 gem 'turbolinks'
 
+gem 'sorcery'
+
 group :development, :test do
   gem 'debugger'
   gem 'rspec-rails'
