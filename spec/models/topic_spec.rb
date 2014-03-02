@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe Forum do
-  fields = %i[name description]
+describe Topic do
+  fields = %i[name forum_id]
   fields.each do |field|
     it { should respond_to(field) }
   end
 
-  it { should have_many(:topics) }
+  it { should belong_to(:forum) }
 end
