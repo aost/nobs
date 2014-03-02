@@ -17,6 +17,7 @@ gem 'sorcery'
 group :development, :test do
   gem 'debugger'
   gem 'rspec-rails'
+  gem 'capybara'
 end
 
 group :test do
