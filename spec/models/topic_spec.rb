@@ -3,4 +3,5 @@ describe Topic do
   include_examples "has fields", fields
 
   it { should belong_to(:forum) }
+  it { should have_many(:posts) }
 end
