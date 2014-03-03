@@ -1,8 +1,3 @@
 <div id="forums">
-  <% @forums.each do |forum| %>
-    <div class="forum">
-      <h1 class="name"><%= forum.name %></h1>
-      <p class="description"><%= forum.description %></p>
-    </div>
-  <% end %>
+  <%= render @forums %>
 </div>
