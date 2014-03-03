@@ -16,7 +16,7 @@ Dir[Rails.root.join("spec/support/**/*.rb")].each { |f| require f }
 ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 RSpec.configure do |config|
-  config.before(:all) do
+  config.before(:each) do
     FactoryGirl.create_list(:forum_with_topics_with_posts, 3)
   end
 
