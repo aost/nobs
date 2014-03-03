@@ -1,19 +1,19 @@
 shared_examples "visit forums" do
   it "shows header navigation bar" do
-    navbar = "header #navbar"
+    navbar_sel = "header #navbar"
 
-    expect(page).to have_css(navbar)
-    expect(page).to have_css("#{navbar} .site-name", text: "Your Forums")
+    expect(page).to have_css(navbar_sel)
+    expect(page).to have_css("#{navbar_sel} .site-name", text: "Your Forums")
   end
 
   it "lists forums" do
-    forum = "#forums .forum"
+    forum_sel = "#forums .forum"
 
-    expect(page).to have_css(forum, count: 3)
+    expect(page).to have_css(forum_sel, count: Forum.count)
 
-    Forum.all.each do |record|
-      expect(page).to have_css("#{forum} .name", text: record.name)
-      expect(page).to have_css("#{forum} .description", text: record.description)
+    Forum.all.each do |forum|
+      expect(page).to have_css("#{forum_sel} .name", text: forum.name)
+      expect(page).to have_css("#{forum_sel} .description", text: forum.description)
     end
   end
 end

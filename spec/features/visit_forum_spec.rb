@@ -8,12 +8,12 @@ describe "visit forum" do
   end
 
   it "lists topics" do
-    topic = "#topics .topic"
+    topic_sel = "#topics .topic"
 
-    expect(page).to have_css(topic, count: 3)
+    expect(page).to have_css(topic_sel, count: forum.topics.count)
 
-    forum.topics.each do |record|
-      expect(page).to have_css("#{topic} .name", text: record.name)
+    forum.topics.each do |topic|
+      expect(page).to have_css("#{topic_sel} .name", text: topic.name)
     end
   end
 end
