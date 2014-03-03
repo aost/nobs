@@ -1,9 +1,4 @@
-describe "Home" do
-  before do
-    3.times { FactoryGirl.create(:forum) }
-    visit '/'
-  end
-
+shared_examples "visit forums" do
   it "shows header navigation bar" do
     navbar = "header .navbar"
 
