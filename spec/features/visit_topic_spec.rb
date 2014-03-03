@@ -16,6 +16,8 @@ describe "visit topic" do
 
     topic.posts.each do |post|
       expect(page).to have_css("#{post_sel} .content", text: post.content)
+      expect(page).to have_css("#{post_sel} .user")
+      expect(page).to have_css("#{post_sel} .user .username", text: post.user.username)
     end
   end
 end

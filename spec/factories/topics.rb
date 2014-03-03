@@ -1,6 +1,7 @@
 FactoryGirl.define do
   factory :topic do
     sequence(:name) { |n| "Topic ##{n}" }
+    user
 
     factory :topic_with_posts do
       ignore do
