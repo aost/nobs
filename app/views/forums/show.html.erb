@@ -1,1 +1,5 @@
-<h2>Forum <%= @forum.id %>!</h2>
+<h2 id="forum-name"><%= @forum.name %></h2>
+
+<div id="topics">
+  <%= render @forum.topics %>
+</div>
