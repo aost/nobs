@@ -11,6 +11,7 @@ describe "visit forum" do
   it "lists topics" do
     topic_sel = "#topics .topic"
 
+    expect(forum.topics.count).to be > 0
     expect(page).to have_css(topic_sel, count: forum.topics.count)
 
     forum.topics.each do |topic|

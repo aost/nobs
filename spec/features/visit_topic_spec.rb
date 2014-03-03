@@ -11,6 +11,7 @@ describe "visit topic" do
   it "shows posts" do
     post_sel = "#topic .post"
 
+    expect(topic.posts.count).to be > 0
     expect(page).to have_css(post_sel, count: topic.posts.count)
 
     topic.posts.each do |post|
