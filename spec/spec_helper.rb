@@ -17,7 +17,7 @@ ActiveRecord::Migration.check_pending! if defined?(ActiveRecord::Migration)
 
 RSpec.configure do |config|
   config.before(:all) do
-    3.times { FactoryGirl.create(:forum_with_topics) }
+    3.times { FactoryGirl.create(:forum_with_topics_with_posts) }
   end
 
   # ## Mock Framework
