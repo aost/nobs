@@ -1,5 +1,4 @@
 describe "visit forum" do
-  include_context "setup forums"
   let(:forum) { Forum.first }
   before { visit "/forums/#{forum.id}" }
 
