@@ -1,5 +1,9 @@
 <h2 id="forum-name"><%= @forum.name %></h2>
 
-<div id="topics">
-  <%= render @forum.topics %>
+<div class="table-responsive">
+  <table id="topics" class="table">
+    <tbody>
+      <%= render @forum.topics %>
+    </tbody>
+  </table>
 </div>
