@@ -1,9 +1,9 @@
 shared_examples "visit forums" do
   it "shows header navigation bar" do
-    navbar = "header .navbar"
+    navbar = "header #navbar"
 
     expect(page).to have_css(navbar)
-    expect(page).to have_css("#{navbar} .navbar-brand", text: "Your Forums")
+    expect(page).to have_css("#{navbar} .site-name", text: "Your Forums")
   end
 
   it "lists forums" do
