@@ -1,5 +1,6 @@
 Nobs::Application.routes.draw do
   resources :forums, only: %i[index show]
+  resources :topics, only: :show
 
   root 'forums#index'
 
