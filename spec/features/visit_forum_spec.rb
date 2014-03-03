@@ -3,6 +3,8 @@ describe "visit forum" do
   let(:forum) { Forum.first }
   before { visit "/forums/#{forum.id}" }
 
+  include_examples "visit page"
+
   it "shows forum name" do
     expect(page).to have_css("#forum-name", text: forum.name)
   end
