@@ -1,9 +1,8 @@
 describe ForumsController do
+  shared_context "setup forums"
+
   describe 'GET #index' do
-    before do
-      3.times { FactoryGirl.create(:forum) }
-      get :index
-    end
+    before { get :index }
 
     it { should respond_with(:ok) }
     it { should render_template('index') }

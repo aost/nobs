@@ -1,8 +1,6 @@
 describe "visit root" do
-  before do
-    3.times { FactoryGirl.create(:forum) }
-    visit '/'
-  end
+  include_context "setup forums"
+  before { visit '/' }
 
   include_examples "visit forums"
 end
