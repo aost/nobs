@@ -18,9 +18,9 @@ group :development, :test do
   gem 'debugger'
   gem 'rspec-rails'
   gem 'capybara'
+  gem 'factory_girl_rails'
 end
 
 group :test do
   gem 'shoulda-matchers'
-  gem 'factory_girl_rails'
 end
